@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jcenter.bintray.com' }
+    }
+}
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '4.0.2'
+}
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://jcenter.bintray.com' }
+}
+
+dependencies {
+    implementation 'com.auth0:java-jwt:3.8.0'
+}
+
+mainClassName = 'com.hhandoko.graaldecoding.Application'
